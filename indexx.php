@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -43,7 +43,7 @@ session_start();
             <option value="Four Seasons">Four Seasons</option>
             <option value="Renaissance">Renaissance</option>
         </select><br>
-        <input type="submit" name="submit"><input><br>
+        <input type="submit" name="submit"></input><br>
    </form>
    
     <?php
