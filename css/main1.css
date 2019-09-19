@@ -4,7 +4,7 @@
 }
 .bg {
   /* The image used */
-  background-image: url("https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("https://images.pexels.com/photos/2417862/pexels-photo-2417862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 
   /* Full height */
   height:100%;
@@ -24,4 +24,9 @@
 div#form{
    margin-top:20%;
 }
-
+.container1{
+  text-align:center;
+}
+.card{
+  
+}

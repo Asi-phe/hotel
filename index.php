@@ -25,7 +25,7 @@ session_start();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-grey white-text">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark white-text">
   <a class="navbar-brand white-text" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -64,10 +64,57 @@ session_start();
 <p id="city"></p>
 <p id="town"></p>
 </div>
-<div class="container1">
+<div class="container">
+  <h2>Horizontal form</h2>
+  <!--Form-->
+  <form class="form-horizontal" action="/index.php">
+  <form class="form-group p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+    <div class="form-group">
+      <div class="col-sm-10">
+      <label class="control-label col-sm-2"for="Firstname">Firstname</label>
+       <input type="text" class="form-control" name="firstname" placeholder='First Name' required>
+      </div>
+    </div>
 
+    <div class="form-group">
+    <div class="col-sm-10">
+      <label class="control-label col-sm-2"for="surname">Surname</label>
+       <input type="text" class="form-control" name="surname" placeholder='Surname' required>
+                
+        
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="hotelname">Hotel Name:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="hotelname" placeholder="Hotel Name" name="Hotel Name">
+      </div>
+
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="indate">Indate</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="indate" placeholder="indate" name="indate">
+      </div>
+
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="outdate">Indate</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="outdate" placeholder="outdate" name="outdate">
+      </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container1">
 <div id='form'>
-<form class="form-inline p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+<form class="form-group p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
 <label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
 <label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
@@ -89,6 +136,48 @@ session_start();
 </div>
 </div>
 </div>
+
+<!--Images-->
+<div class="card-group">
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1240687/pexels-photo-1240687.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/26139/pexels-photo-26139.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/279727/pexels-photo-279727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+    <img src="https://images.pexels.com/photos/2889618/pexels-photo-2889618.jpeg?cs=srgb&dl=bedroom-contemporary-curtains-2889618.jpg&fm=jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<!--End of images-->
 <?php
 require_once "connect.php";
 echo $conn->error;
@@ -147,14 +236,14 @@ $interval = $datetime1->diff($datetime2);
 
 $interval->format('%d');
 
-$checkInStamp = strtotime($_SESSION['indate']);
-        $checkOutStamp = strtotime($_SESSION['outdate']);
+//$checkInStamp = strtotime($_SESSION['indate']);
+        //$checkOutStamp = strtotime($_SESSION['outdate']);
         // echo $checkInStamp . '<br>';
         // echo $checkOutStamp;
-        if ($checkInStamp - $checkOutStamp > 86400 || $checkInStamp == $checkOutStamp) {
-            header("Location: ?error=timestamp");
-            exit;
-        }
+        //if ($checkInStamp - $checkOutStamp > 86400 || $checkInStamp == $checkOutStamp) {
+           // header("Location: ?error=timestamp");
+            //exit;
+        //}
 
 $daysbooked = $interval->format('%d');
 $value;
