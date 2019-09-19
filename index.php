@@ -25,31 +25,31 @@ session_start();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-grey white-text">
+  <a class="navbar-brand white-text" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Hotels <span class="sr-only">(current)</span></a>
+        <a class="nav-link white-text" href="#">Hotels <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link white-text" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link white-text" href="#">Pricing</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+      <li class="nav-item dropdown white-text">
+        <a class="nav-link dropdown-toggle white-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hotel Names
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">City Lodge</a>
-          <a class="dropdown-item" href="#">Town Lodge</a>
-          <a class="dropdown-item" href="#">Raddison</a>
-          <a class="dropdown-item" href="#">Holiday IN</a>
+          <a class="dropdown-item white-text" href="#">City Lodge</a>
+          <a class="dropdown-item white-text" href="#">Town Lodge</a>
+          <a class="dropdown-item white-text" href="#">Raddison</a>
+          <a class="dropdown-item white-text" href="#">Holiday IN</a>
         </div>
       </li>
     </ul>
@@ -230,15 +230,7 @@ echo '<div id="confirmed">'."Booking confirmed".'</div>';
 
 }
 
-// if($_POST['confirm']){
-//    $firstname =$_SESSION['firstname'];
-//    $surname =$_SESSION['surname'];
-//    $hotelname =$_SESSION['hotelname'];
-//    $indate=$_SESSION['indate'];
-//    $outdate=$_SESSION['outdate'];
-//      mysqli_query($conn, "INSERT INTO bookings (firstname, surname, hotelname,indate,outdate)
-//      VALUES ('$firstname ', '$surname','$hotelname','$indate','$outdate')");
-// }
+
 
 
 
