@@ -24,6 +24,38 @@ session_start();
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+<!--Nav bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Hotels <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">City Lodge</a>
+          <a class="dropdown-item" href="#">Town Lodge</a>
+          <a class="dropdown-item" href="#">Raddison</a>
+          <a class="dropdown-item" href="#">Holiday IN</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--big ground image-->
 <div class="bg">
 <h1>Book Hotel</h1>
 <div class="price">
@@ -35,7 +67,7 @@ session_start();
 <div class="container1">
 
 <div id='form'>
-<form class="form-inline p-5"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+<form class="form-inline p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
 <label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
 <label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
