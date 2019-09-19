@@ -10,18 +10,32 @@ session_start();
 <body>
 <link rel="stylesheet" href="css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 
 <h1>Book Hotel</h1>
 <div class="price">
-<p id="inn">Holiday Inn: R 200</p>
-<p id="rad">Radison: R 100</p>
-<p id="city">City Lodge: R 400</p>
-<p id="town">Town Lodge: R 150</p>
+<p id="inn"></p>
+<p id="rad"></p>
+<p id="city"></p>
+<p id="town"></p>
 </div>
+<div class="container">
 
 <div id='form'>
-<form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+<form class="form-inline p-5"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
 <label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
 <label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
@@ -41,7 +55,7 @@ session_start();
 
 </form>
 </div>
-
+</div>
 
 <?php
 require_once "connect.php";
@@ -116,6 +130,7 @@ $value;
 switch(isset($_SESSION['hotelname'])){
    case 'Holiday Inn':
    $value = $daysbooked * 200;
+  
    break;
 
    case 'Radison':
@@ -166,6 +181,7 @@ echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " me
 
 }
 
+//write to database
 if(isset($_POST['confirm'])){
 //Preparing and binding a statement
 //prepare is method, this way we only pass the query once and then the values
