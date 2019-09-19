@@ -8,7 +8,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <body>
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main1.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -24,7 +24,7 @@ session_start();
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-
+<div class="bg">
 <h1>Book Hotel</h1>
 <div class="price">
 <p id="inn"></p>
@@ -56,7 +56,7 @@ session_start();
 </form>
 </div>
 </div>
-
+</div>
 <?php
 require_once "connect.php";
 echo $conn->error;
