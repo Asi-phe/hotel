@@ -98,11 +98,23 @@ session_start();
         <input type="text" class="form-control" id="indate" placeholder="indate" name="indate">
       </div>
 
-      <div class="form-group">
-      <label class="control-label col-sm-2" for="outdate">Indate</label>
+      <div class="form-group dropdown">
+      <label class="control-label col-sm-2" for="outdate">Outdate</label>
       <div class="col-sm-10">          
         <input type="text" class="form-control" id="outdate" placeholder="outdate" name="outdate">
       </div>
+
+      <div class="form-group dropdown">
+      <label class="control-label col-sm-2" for="outdate">Outdate</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="outdate" placeholder="outdate" name="outdate">
+      </div>
+
+<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
+<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
+<button class="submit" name="submit" type="submit">Submit</button>
+
+
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
