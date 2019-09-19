@@ -32,7 +32,7 @@ session_start();
 <p id="city"></p>
 <p id="town"></p>
 </div>
-<div class="container">
+<div class="container1">
 
 <div id='form'>
 <form class="form-inline p-5"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
