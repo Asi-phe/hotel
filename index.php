@@ -25,31 +25,31 @@ session_start();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark white-text">
-  <a class="navbar-brand white-text" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark black-text">
+  <a class="navbar-brand black-text" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link white-text" href="#">Hotels <span class="sr-only">(current)</span></a>
+        <a class="nav-link black-text" href="#">Hotels <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link white-text" href="#">Features</a>
+        <a class="nav-link black-text" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link white-text" href="#">Pricing</a>
+        <a class="nav-link black-text" href="#">Pricing</a>
       </li>
-      <li class="nav-item dropdown white-text">
-        <a class="nav-link dropdown-toggle white-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item dropdown black-text">
+        <a class="nav-link dropdown-toggle black-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Hotel Names
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item white-text" href="#">City Lodge</a>
-          <a class="dropdown-item white-text" href="#">Town Lodge</a>
-          <a class="dropdown-item white-text" href="#">Raddison</a>
-          <a class="dropdown-item white-text" href="#">Holiday IN</a>
+          <a class="dropdown-item black-text" href="#">City Lodge</a>
+          <a class="dropdown-item black-text" href="#">Town Lodge</a>
+          <a class="dropdown-item black-text" href="#">Raddison</a>
+          <a class="dropdown-item black-text" href="#">Holiday IN</a>
         </div>
       </li>
     </ul>
@@ -82,109 +82,63 @@ session_start();
        <input type="text" class="form-control" name="surname" placeholder='Surname' required>
                 
         
-      </div>
-    </div>
-
-
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="hotelname">Hotel Name:</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="hotelname" placeholder="Hotel Name" name="Hotel Name">
-      </div>
-
-      <div class="form-group">
-      <label class="control-label col-sm-2" for="indate">Indate</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="indate" placeholder="indate" name="indate">
-      </div>
-
-      <div class="form-group dropdown">
-      <label class="control-label col-sm-2" for="outdate">Outdate</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="outdate" placeholder="outdate" name="outdate">
-      </div>
-
-      <div class="form-group dropdown">
-      <label class="control-label col-sm-2" for="outdate">Outdate</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="outdate" placeholder="outdate" name="outdate">
-      </div>
-
-<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
-<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
-<button class="submit" name="submit" type="submit">Submit</button>
-
-
-
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
-  </form>
-</div>
-
-<div class="container1">
-<div id='form'>
-<form class="form-group p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-
-<label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
-<label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
-<label>Hotel Name
-<select name="hotelname" required>
-  <option value="Holiday Inn">Holiday Inn</option>
-  <option value="Radison">Radison</option>
-  <option value="City Lodge">City Lodge</option>
-  <option value="Town Lodge">Town Lodge</option>
-</select>
-</label><br>
-
-<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
-<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
-<button class="submit" name="submit" type="submit">Submit</button>
-
-
-</form>
-</div>
-</div>
-</div>
+       <div class="form-group col-sm-10">
+               <!-- the 4 different hotels  -->
+               <label for="hotels">Select a hotel below :</label>
+               <select class="form-control form-control-lg" name="hotelname" id="hotelName" required>
+                   <option value=" ">  </option>
+                   <option value="The Orleans - R700 per night">The Orleans - R700 per night</option>
+                   <option value="Bellagio - R600 per night">Bellagio - R600 per night </option>
+                   <option value="The Four Queens - R700 per night">The Four Queens - R700 per night</option>
+                   <option value="The Cosmopolitan - R800 per night">The Cosmopolitan - R800 per night </option>
+               </select>
+           </div>
+           <br>
+           <!-- the date in and out booking of the hotel -->
+           <div class="form-group col-lg-10">
+               <label for="start">Start date :</label>
+               <input type="date" class="form-control" name="indate" min="2018-01-01" max="2020-12-31" aria-label="Todo Date" aria-describedby="button-addon2">
+               <label for="end">End date :</label>
+               <input type="date" class="form-control" name="outdate" min="2018-01-01" max="2020-12-31" aria-label="Todo Date" aria-describedby="button-addon2">
+            </div>
+            <br>
 
 <!--Images-->
-<div class="card-group">
-  <div class="card">
-    <img src="https://images.pexels.com/photos/1240687/pexels-photo-1240687.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container">
+  <h2>Image Gallery</h2>
+  <p>The .thumbnail class can be used to display an image gallery.</p>
+  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+  <p>Click on the images to enlarge them.</p>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <a href="/w3images/lights.jpg" target="_blank">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.pexels.com/photos/26139/pexels-photo-26139.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <a href="/w3images/nature.jpg" target="_blank">
+          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.pexels.com/photos/279727/pexels-photo-279727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-    <img src="https://images.pexels.com/photos/2889618/pexels-photo-2889618.jpeg?cs=srgb&dl=bedroom-contemporary-curtains-2889618.jpg&fm=jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <a href="/w3images/fjords.jpg" target="_blank">
+          <img src="/w3images/fjords.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
