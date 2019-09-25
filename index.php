@@ -25,8 +25,8 @@ session_start();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark black-text">
-  <a class="navbar-brand black-text" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light black-text">
+  <a class="navbar-brand black-text" href="#">Asiphe Mazamisa Hotels</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -102,18 +102,30 @@ session_start();
                <input type="date" class="form-control" name="outdate" min="2018-01-01" max="2020-12-31" aria-label="Todo Date" aria-describedby="button-addon2">
             </div>
             <br>
+          <!-- the submit button of the form -->
+          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+       </form>
+       <br>  
 
 <!--Images-->
 <div class="container">
-  <h2>Image Gallery</h2>
-  <p>The .thumbnail class can be used to display an image gallery.</p>
-  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-  <p>Click on the images to enlarge them.</p>
+  
   <div class="row">
     <div class="col-md-3">
       <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
-          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+        <a href="images/do.jpg" target="_blank">
+          <img src="images/do.jpg" alt="hotel" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <a href="images/hotesl.jpg" target="_blank">
+          <img src="images/hotesl.jpg" alt="Nature" style="width:100%">
           <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
@@ -122,8 +134,8 @@ session_start();
     </div>
     <div class="col-md-3">
       <div class="thumbnail">
-        <a href="/w3images/nature.jpg" target="_blank">
-          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+        <a href="images/im.jpg" target="_blank">
+          <img src="images/im.jpg" alt="Nature" style="width:100%">
           <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
@@ -132,8 +144,8 @@ session_start();
     </div>
     <div class="col-md-3">
       <div class="thumbnail">
-        <a href="/w3images/fjords.jpg" target="_blank">
-          <img src="/w3images/fjords.jpg" alt="Fjords" style="width:100%">
+        <a href="images/imag.jpg" target="_blank">
+          <img src="images/imag.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
@@ -141,6 +153,10 @@ session_start();
       </div>
     </div>
   </div>
+</div>
+<!--FOOTER-->
+<div class="footer">
+  <p>Created by Asiphe Mazamisa</p>
 </div>
 
 <!--End of images-->
