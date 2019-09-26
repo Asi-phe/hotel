@@ -13,20 +13,20 @@ session_start();
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.4/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.4/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/4.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.4/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-light black-text">
-  <a class="navbar-brand black-text" href="#">Asiphe Mazamisa Hotels</a>
+  <a class="navbar-brand black-text" href="#">Asiphe Mazamisa </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -64,96 +64,33 @@ session_start();
 <p id="city"></p>
 <p id="town"></p>
 </div>
+<!--Body-->
 <div class="container">
-  <h2>Horizontal form</h2>
-  <!--Form-->
-  <form class="form-horizontal" action="/index.php">
-  <form class="form-group p-5 py-1"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-    <div class="form-group">
-      <div class="col-sm-10">
-      <label class="control-label col-sm-2"for="Firstname">Firstname</label>
-       <input type="text" class="form-control" name="firstname" placeholder='First Name' required>
-      </div>
-    </div>
-
-    <div class="form-group">
-    <div class="col-sm-10">
-      <label class="control-label col-sm-2"for="surname">Surname</label>
-       <input type="text" class="form-control" name="surname" placeholder='Surname' required>
-                
-        
-       <div class="form-group col-sm-10">
-               <!-- the 4 different hotels  -->
-               <label for="hotels">Select a hotel below :</label>
-               <select class="form-control form-control-lg" name="hotelname" id="hotelName" required>
-                   <option value=" ">  </option>
-                   <option value="The Orleans - R700 per night">The Orleans - R700 per night</option>
-                   <option value="Bellagio - R600 per night">Bellagio - R600 per night </option>
-                   <option value="The Four Queens - R700 per night">The Four Queens - R700 per night</option>
-                   <option value="The Cosmopolitan - R800 per night">The Cosmopolitan - R800 per night </option>
-               </select>
-           </div>
-           <br>
-           <!-- the date in and out booking of the hotel -->
-           <div class="form-group col-lg-10">
-               <label for="start">Start date :</label>
-               <input type="date" class="form-control" name="indate" min="2018-01-01" max="2020-12-31" aria-label="Todo Date" aria-describedby="button-addon2">
-               <label for="end">End date :</label>
-               <input type="date" class="form-control" name="outdate" min="2018-01-01" max="2020-12-31" aria-label="Todo Date" aria-describedby="button-addon2">
-            </div>
-            <br>
-          <!-- the submit button of the form -->
-          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-       </form>
-       <br>  
+<div class="row">
+<div class="col-md-6">
+<div id='form'>
+ <form class="text-center"role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+ <label class="form-control mb-4">First Name<input type="text" name="firstname"  required></label>
+ <label  class="form-control mb-4">Surname<input type="text" name="surname" required></label>
+ <label  class="form-control mb-4">Hotel Name
+ <select class="browser-default custom-select form-control mb-4" name="hotelname" required>
+     <option value="Holiday Inn">Holiday Inn</option>
+     <option value="Radison">Radison</option>
+     <option value="City Lodge">City Lodge</option>
+     <option value="Town Lodge">Town Lodge</option>
+ </select>
+ </label>
+ <label for="date-picker class="form-control mb-4">In Date<input id="date-picker-example"class="form-control datepicker" type="date" name="indate" placeholder='indate' required></label>
+ <label for="date-picker class="form-control mb-4">Out Date<input id="date-picker-example"class="form-control datepicker" type="date" name="outdate" placeholder='outdate' required></label>
+ <button class="btn btn black-sm text-center "name="submit">BOOK</i></button>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
 
 <!--Images-->
-<div class="container">
-  
-  <div class="row">
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <a href="images/do.jpg" target="_blank">
-          <img src="images/do.jpg" alt="hotel" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <a href="images/hotesl.jpg" target="_blank">
-          <img src="images/hotesl.jpg" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <a href="images/im.jpg" target="_blank">
-          <img src="images/im.jpg" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <a href="images/imag.jpg" target="_blank">
-          <img src="images/imag.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 <!--FOOTER-->
 <div class="footer">
   <p>Created by Asiphe Mazamisa</p>
@@ -182,7 +119,7 @@ if (isset($_GET['error']) && $_GET['error'] == 'timestamp') {
 
 <div class='panel panel-default'>
    <h1>
-      You must select at least  1 day 
+      You must select at least  4 day 
    </h1>
       </div>
 
