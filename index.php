@@ -25,47 +25,41 @@ session_start();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-light black-text">
-  <a class="navbar-brand black-text" href="#">Asiphe Mazamisa </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link black-text" href="#">Hotels <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link black-text" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link black-text" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown black-text">
-        <a class="nav-link dropdown-toggle black-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Hotel Names
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item black-text" href="#">City Lodge</a>
-          <a class="dropdown-item black-text" href="#">Town Lodge</a>
-          <a class="dropdown-item black-text" href="#">Raddison</a>
-          <a class="dropdown-item black-text" href="#">Holiday IN</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!--big ground image-->
-<div class="bg">
-<h1>Book Hotel</h1>
-<div class="price">
-<p id="inn"></p>
-<p id="rad"></p>
-<p id="city"></p>
-<p id="town"></p>
-</div>
+<!--End of the nav bar-->
 <!--Body-->
-<div class="container">
+
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text">
+                    <div class="white-text text-center wow fadeInUp">
+                        <h2>Book your dream hotel Today!</h2>
+                        <h5>We provide you with the most beautiful and luxury hotels in Cape Town.</h5>
+                        <br>
+                        <p><div class="container">
 <div class="row">
 <div class="col-md-6">
 <div id='form'>
@@ -87,7 +81,34 @@ session_start();
  </div>
  </div>
  </div>
- </div>
+ </div> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main class="text-center py-5">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <p align="justify">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<!--Main Layout-->
+
 
 <!--Images-->
 
