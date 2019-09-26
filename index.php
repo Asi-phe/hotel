@@ -8,20 +8,20 @@ session_start();
 <!DOCTYPE html>
 <html>
 <body>
-<link rel="stylesheet" href="css/main1.css">
+<link rel="stylesheet" href="css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.4/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.4.4/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/4.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.4/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 <!--Nav bar-->
@@ -29,27 +29,12 @@ session_start();
 <!--Body-->
 
 <!--Main Navigation-->
+<nav class="navbar fixed-top navbar-light bg-dark">
+  <a class="navbar-brand" href="#">Hotel Booking</a>
+</nav>
 <header>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
-        <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <div class="view intro-2">
         <div class="full-bg-img">
@@ -100,7 +85,7 @@ session_start();
         <div class="row">
             <div class="col-md-12">
 
-                <p align="justify">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p align="justify"></p>
 
             </div>
         </div>
@@ -110,7 +95,8 @@ session_start();
 <!--Main Layout-->
 
 
-<!--Images-->
+
+ <!--End of image gallery-->
 
 <!--FOOTER-->
 <div class="footer">
@@ -127,8 +113,8 @@ $sql = "CREATE TABLE IF NOT EXISTS bookings (
    firstname VARCHAR(50),
    surname VARCHAR(50),
    hotelname VARCHAR(50),
-   indate VARCHAR(30),
-   outdate VARCHAR(30),
+   indate VARCHAR(40),
+   outdate VARCHAR(40),
    booked INT(4))";
 
 
@@ -140,7 +126,7 @@ if (isset($_GET['error']) && $_GET['error'] == 'timestamp') {
 
 <div class='panel panel-default'>
    <h1>
-      You must select at least  4 day 
+      You must select at least  1 day 
    </h1>
       </div>
 
